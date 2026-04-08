@@ -10,7 +10,7 @@ const ResultScreen = ({ route }) => {
   const adjustedLength = parseFloat(footLength) + sockAdjustment;
   const adjustedWidth = parseFloat(footWidth) + sockAdjustment;
 
-  const recommendedBoots = bootDatabase.filter(boot => {
+  const recommendedBoots = bootDatabase.filter((boot) => {
     return (
       adjustedLength >= boot.minLength &&
       adjustedLength <= boot.maxLength &&
@@ -24,6 +24,7 @@ const ResultScreen = ({ route }) => {
       <Text style={{ fontSize: 18, marginBottom: 10 }}>
         Boot Recommendations:
       </Text>
+
       <FlatList
         data={recommendedBoots}
         keyExtractor={(item) => item.name}
@@ -34,4 +35,11 @@ const ResultScreen = ({ route }) => {
           </View>
         )}
         ListEmptyComponent={
-          <Text>No suitable boots found for the given measurements.</Tex
+          <Text>No suitable boots found for the given measurements.</Text>
+        }
+      />
+    </View>
+  );
+};
+
+export default ResultScreen;
