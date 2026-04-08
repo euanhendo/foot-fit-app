@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Nike Mercurial",
+    "minLength": 250,
+    "maxLength": 270,
+    "minWidth": 90,
+    "maxWidth": 100,
+    "notes": "Tight fit, good for narrow feet"
+  },
+  {
+    "name": "Adidas Predator",
+    "minLength": 255,
+    "maxLength": 275,
+    "minWidth": 95,
+    "maxWidth": 105,
+    "notes": "Slightly wider, more comfortable"
+  }
+]
