@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { View, Text, Button, Picker } from 'react-native';
 
-const SockSelectionScreen = ({ navigation }) => {
+const SockSelectionScreen = ({ navigation, route }) => {
   const [sockType, setSockType] = useState('');
 
+  const { footLength, footWidth } = route.params;
+
   const handleNext = () => {
-    navigation.navigate('ResultScreen', { sockType });
+    navigation.navigate('ResultScreen', {
+      footLength,
+      footWidth,
+      sockType,
+    });
   };
 
   return (
